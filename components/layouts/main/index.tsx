@@ -26,27 +26,18 @@ const NavBar: FC<{}> = () => {
 
 const LeftMenu: FC<{}> = () => {
   return (
-    <VStack
-      height="100vh"
-      width="full"
-      padding={4}
-      spacing={8}
-      bg="gray.200"
-      alignItems={'flex-start'}
-    >
-      <ul style={{ listStyleType: 'none' }}>
-        <li>
-          <NextLink href={'/'} passHref>
-            <Link>Card Viewer</Link>
-          </NextLink>
-        </li>
-        <li>
-          <NextLink href={'/other-page'} passHref>
-            <Link>Other page</Link>
-          </NextLink>
-        </li>
-      </ul>
-    </VStack>
+    <ul style={{ listStyleType: 'none' }}>
+      <li>
+        <NextLink href={'/'} passHref>
+          <Link>Card Viewer</Link>
+        </NextLink>
+      </li>
+      <li>
+        <NextLink href={'/other-page'} passHref>
+          <Link>Other page</Link>
+        </NextLink>
+      </li>
+    </ul>
   );
 };
 
@@ -69,7 +60,16 @@ const MainLayout: FC<ICardsLayout> = (props) => {
         flexWrap="wrap"
         spacing={0}
       >
-        <Flex {...commonStylingProps} flexBasis={{ base: '100%', lg: '15%' }}>
+        <Flex
+          as="aside"
+          {...commonStylingProps}
+          flexBasis={{ base: '100%', lg: '15%' }}
+          height="100vh"
+          width="full"
+          padding={4}
+          bg="gray.200"
+          alignItems={'flex-start'}
+        >
           <LeftMenu />
         </Flex>
         <Flex
