@@ -19,7 +19,9 @@
       "@/lib/*": ["./lib/*"],
       "@/components/*": ["./components/*"],
       "@/locales/*": ["./locales/*"],
-      "@/prisma/*": ["./prisma/*"]
+      "@/prisma/*": ["./prisma/*"],
+      "@/hooks/*": ["./lib/hooks/*"],
+      "@/context/*": ["./context/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

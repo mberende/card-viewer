@@ -1,4 +1,6 @@
 import { type FC } from 'react';
+import React from 'react';
+
 import NextLink from 'next/link';
 import { Link } from '@chakra-ui/react';
 import {
@@ -48,25 +50,18 @@ const MainLayout: FC<ICardsLayout> = (props) => {
     minWidth: 'container.xs',
     height: 'full',
     marginInlineStart: '0px',
-    overflowY: 'auto',
   };
 
   return (
     <>
       <NavBar />
-      <HStack
-        height="100vh"
-        alignItems="flex-start"
-        flexWrap="wrap"
-        spacing={0}
-      >
+      <HStack alignItems="stretch" spacing={0}>
         <Flex
           as="aside"
           {...commonStylingProps}
-          flexBasis={{ base: '100%', lg: '15%' }}
-          height="100vh"
-          width="full"
+          flexBasis={'20%'}
           padding={4}
+          height="auto"
           bg="gray.200"
           alignItems={'flex-start'}
         >
@@ -75,8 +70,9 @@ const MainLayout: FC<ICardsLayout> = (props) => {
         <Flex
           as="main"
           {...commonStylingProps}
-          flexBasis={{ base: '100%', lg: '85%' }}
           p={10}
+          width="100%"
+          minHeight="100vh"
           bg={'gray.100'}
         >
           {children}

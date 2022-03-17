@@ -1,4 +1,4 @@
-import { type FC } from 'react';
+import { type FC, useContext } from 'react';
 import { Box } from '@chakra-ui/react';
 import { CardList } from './components/card-list';
 import { CardListContextProvider } from '../../context/CardListContex';
